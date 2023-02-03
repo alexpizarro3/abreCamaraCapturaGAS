@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <?!= include('myStyles'); ?> <!--Aqui agregamos el archivo styleCss.html -->
+  </head>
+  <body>
+    <nav class="navbar bg-primary" data-bs-theme="dark">
+      <h1 class="container-fluid" style="text-align: center;">Tomar Foto guardarla en Drive y listarla en Sheets</h1>
+    </nav>
+    <br>
+    <div class="container-fluid" style="text-align: center;">
+      <div class="col">
+        <video id="video" src="" hidden="true"></video>
+        <canvas id="canvas" hidden="true"></canvas>
+      </div>
+      <div>
+        <img id="photo" src="" alt="" hidden="true">
+      </div>
+      <button type="button" class="btn btn-success" id="tomarFoto" name="tomarFoto" onclick=mostrarOcultarVideo()>Tomar Foto</button>
+      <button type="button" class="btn btn-primary" id="salvarFoto" name="salvarFoto" onclick=tomarFoto()>Salvar</button>
+    </div>
+    <?!= include('functionsJs'); ?> <!--Aqui agregamos el archivo functionsJs.html -->
+  </body>
+</html>
